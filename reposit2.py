@@ -1,11 +1,11 @@
 import random
 
-def dado(veces):
-    result=[]
-    for i in range(0,veces):
-        result.append(random.randint(1, 10))
-    for i in result:
-        if i==10:
-            result.append(random.randint(1, 10))
-    return result
-print (dado(5))
+def tirada_dado(veces):
+    resul=[]
+    for i in range(veces):
+        resul.append(random.randint(1, 10))
+        diez=resul.count(10)
+        unos=resul.count(1)
+    print(f"exitos seguros={diez},pifias={unos}")
+    return resul
+print(tirada_dado(5))
